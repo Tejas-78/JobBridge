@@ -1,0 +1,233 @@
+/* Main content container */
+:root{
+    --primary:rgb(148, 17, 255);
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(20, 3, 36);
+  }
+  .lastVisit{
+    
+    z-index: 100;
+    position: relative;
+  }
+  /* Navbar CSS */
+  .custom-navbar {
+    background-color: #2c003e;
+    color: var(--primary);
+    box-shadow: -5px 5px 9px #552568;
+  }
+  
+  .custom-navbar .navbar-nav .nav-link {
+    color: var(--primary);
+  }
+  
+  .custom-navbar .navbar-brand {
+    color: var(--primary);
+  }
+  
+  .custom-navbar .navbar-toggler-icon {
+    color: var(--primary);
+  }
+  
+  /* Navbar search box */
+  .form-inline .form-control {
+    border-radius: 20px; /* Rounded corners for the search box */
+    border: none;
+    background-color: #472753;
+  }
+  
+  .form-inline .btn-outline-light {
+    border-radius: 20px; /* Rounded corners for the search button */
+    border: none;
+  }
+  .search{
+    background-color: #472753;
+    color: #9777a3;
+  }
+  .search:hover{
+    background-color: #33123f;
+    color: #ccb1d6;
+  }
+  .dropdown-menu{
+    background-color: #2c003e;
+  }
+  .dropdown-item{
+    color: var(--primary);
+  }
+  .button{
+    background-color: var(--primary);
+    color: #ffffff;
+  }
+  .button:hover{
+    background-color: rgb(156, 8, 119);
+    color: #ffffff;
+  }
+  .content-container {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Full viewport height */
+    overflow: hidden;
+  }
+  
+  /* Poster Section */
+  .poster-section {
+    position: absolute;
+    top: -10%;
+    left: -5%;
+    width: 100%;
+    height: 100%;
+    z-index: 1; /* Lower z-index to stay behind the job section */
+    overflow: hidden;
+  }
+  
+  .poster-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: blur(0px);
+  }
+  
+  /* Job Section */
+  .job-section {
+    position: absolute;
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10; /* Higher z-index to be above the poster */
+    text-align: center;
+    background: linear-gradient(135deg, rgb(32, 3, 58), rgb(2, 31, 65));
+    color: #ffffff; /* Set text color to white for better contrast */
+    padding: 40px;
+    border-radius: 8px;
+    animation: fadeInUp 1s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .job-section h2 {
+    margin-bottom: 20px;
+    font-size: 2.5rem;
+    color: var(--primary);
+  }
+  
+  .job-section p {
+    margin-bottom: 20px;
+    font-size: 1.2rem;
+    color: rgb(240, 206, 143);
+  }
+  
+  .btn-primary,
+  .btn-secondary {
+    font-size: 1.2rem;
+    padding: 10px 20px;
+  }
+  
+  /* Custom Animation */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Character-by-character Fade-in and Fade-out Animation */
+  
+  
+  .animated-text span {
+    display: inline-block;
+    font-size: 1.7rem;
+    opacity: 0;
+    animation: fadeInOut 5s infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes fadeInOut {
+    0%, 100% {
+      opacity: 0;
+      transform: translateX(-20px);
+    }
+    50% {
+      opacity: 1;
+      color: rgb(228, 9, 162);
+      transform: translateX(0);
+    }
+  }
+  
+  /* Adjust delay for each character */
+  .animated-text span:nth-child(1) { animation-delay: 0s; }
+  .animated-text span:nth-child(2) { animation-delay: 0.1s; }
+  .animated-text span:nth-child(3) { animation-delay: 0.2s; }
+  /* Continue this pattern for the number of characters */
+/*    not found page  */
+
+
+.emoji {
+  font-size: 5rem;
+  margin-bottom: 20px;
+}
+
+.animated.bounce {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+  }
+  40% {
+      transform: translateY(-30px);
+  }
+  60% {
+      transform: translateY(-15px);
+  }
+}
+
+ .container {
+  text-align: center;
+  color: #d30707;
+}
+
+h1 {
+  font-size: 4rem;
+  margin-bottom: 20px;
+}
+
+p.lead {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.btn-primary {
+  padding: 10px 20px;
+  font-size: 1.2rem;
+}
+/* login */
+.form-container {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 15px;
+  background: linear-gradient(135deg, rgba(84, 24, 139, 0.911), rgba(7, 42, 80, 0.897));
+
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+}
+.form-container h2 {
+  margin-bottom: 30px;
+}
+.link-container {
+  text-align: center;
+  margin-top: 10px;
+}
+.text{
+  text-align: start;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    color: #e4bcff;
+}
+/* form post job */

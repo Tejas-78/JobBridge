@@ -1,0 +1,124 @@
+/* job-details.css */
+.job-details-container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 1px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.job-details-card {
+    padding: 20px;
+    border-radius: 8px;
+  background: linear-gradient(135deg, rgba(84, 24, 139, 0.911), rgba(7, 42, 80, 0.897));
+    color: #d0dae2;
+}
+
+.job-details-card h1 {
+    margin-bottom: 20px;
+    font-size: 2em;
+    text-align: center;
+}
+
+.job-details-card p, .job-details-card ul {
+    font-size: 1em;
+    margin: 10px 0;
+}
+
+.job-details-card .skill-item {
+    display: inline-block;
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: #23598f;
+    border-radius: 4px;
+}
+
+.job-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.job-buttons .btn {
+    text-align: center;
+    padding: 10px 20px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: bold;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+.job-applicants{
+    color: #f3551c;
+    font-size: 1.1em;
+}
+.modal-content{
+  background: linear-gradient(135deg, rgb(83, 24, 139), rgb(7, 42, 80));
+    
+}
+#applyModal label{
+    float: left;
+    color: #d1c8ce;
+}
+#applyModal input{
+    margin-bottom: 15px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #ffffff;
+    border: 1px solid #ccc3c3;
+    outline: none;
+}
+.modal-title{
+    color: #2489fd;
+}
+/* delete */
+.popup-overlay {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+  }
+  
+  .popup-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #e6edf7;
+    
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  }
+  
+  .popup-content h3 {
+    margin-bottom: 20px;
+  }
+  
+  .btn-confirm {
+    background-color: #d9534f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .btn-cancel {
+    background-color: #5bc0de;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+  }
+  
+ 

@@ -1,0 +1,97 @@
+[
+  {
+    "id": "bb805452-1913-48ae-b214-354a95f04994",
+    "recruiterId": "da93f980-c37a-427d-9f60-ecc64c6eea83",
+    "jobCategory": "Software Development",
+    "jobDesignation": "Junior Developer",
+    "jobLocation": "sambhajinagar",
+    "companyName": "Accha Jobs",
+    "salary": "250000",
+    "totalOpenings": "4",
+    "skillsRequired": [
+      "JavaScript",
+      "Python",
+      "Java",
+      "HTML/CSS"
+    ],
+    "applicationEndDate": "2024-08-30",
+    "postedAt": "10/8/2024, 11:24:23 pm"
+  },
+  {
+    "id": "b2ead170-dd46-4dce-a4df-aaf44fa97bf2",
+    "recruiterId": "da93f980-c37a-427d-9f60-ecc64c6eea83",
+    "jobCategory": "Design",
+    "jobDesignation": "Senior Developer",
+    "jobLocation": "mumbai",
+    "companyName": "wipro",
+    "salary": "300000",
+    "totalOpenings": "5",
+    "skillsRequired": [
+      "JavaScript",
+      "Python",
+      "Java",
+      "HTML/CSS",
+      "React",
+      "Node.js"
+    ],
+    "applicationEndDate": "2024-08-17",
+    "postedAt": "10/8/2024, 11:25:15 pm"
+  },
+  {
+    "id": "a05196cb-f7bd-4e30-9a06-19df3afc398c",
+    "recruiterId": "da93f980-c37a-427d-9f60-ecc64c6eea83",
+    "jobCategory": "Software Development",
+    "jobDesignation": "Project Manager",
+    "jobLocation": "Goa",
+    "companyName": "TCS",
+    "salary": "275000",
+    "totalOpenings": "10",
+    "skillsRequired": [
+      "JavaScript",
+      "Python",
+      "Java",
+      "HTML/CSS"
+    ],
+    "applicationEndDate": "2024-08-21",
+    "postedAt": "10/8/2024, 11:26:37 pm"
+  },
+  {
+    "id": "a460e98f-ab34-4736-9998-270273857558",
+    "recruiterId": "da93f980-c37a-427d-9f60-ecc64c6eea83",
+    "jobCategory": "Design",
+    "jobDesignation": "UX/UI Designer",
+    "jobLocation": "Delhi",
+    "companyName": "Capgemini",
+    "salary": "449999",
+    "totalOpenings": "2",
+    "skillsRequired": [
+      "JavaScript",
+      "Python",
+      "Java",
+      "HTML/CSS",
+      "React",
+      "Node.js"
+    ],
+    "applicationEndDate": "2024-08-25",
+    "postedAt": "10/8/2024, 11:28:01 pm"
+  },
+  {
+    "id": "ed1f6ae6-c7ab-4ca9-805e-e30ea9e01ac1",
+    "recruiterId": "6bd8d5df-8354-47d4-8eba-732be057222a",
+    "jobCategory": "Software Development",
+    "jobDesignation": "Product Manager",
+    "jobLocation": "Jalgaon",
+    "companyName": "TCS",
+    "salary": "244400",
+    "totalOpenings": "4",
+    "skillsRequired": [
+      "Python",
+      "Java",
+      "HTML/CSS",
+      "React",
+      "Node.js"
+    ],
+    "applicationEndDate": "2024-09-07",
+    "postedAt": "10/8/2024, 11:31:19 pm"
+  }
+]

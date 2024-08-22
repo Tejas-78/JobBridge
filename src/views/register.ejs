@@ -1,0 +1,51 @@
+<% if(errorMessages){ errorMessages.forEach(error =>{ %>
+
+<div class="container mt-3">
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <%= error.msg %>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>
+
+<% }) } %>
+<div class="form-container">
+  <h2 class="text-center">Register</h2>
+  <form action="/register" method="post">
+    <div class="form-group">
+      <label for="registerName" class="text">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="registerName"
+        placeholder="Enter name"
+        name="name"
+      />
+    </div>
+    <div class="form-group">
+      <label for="registerEmail" class="text">Email address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="registerEmail"
+        placeholder="Enter email"
+        name="email"
+      />
+    </div>
+    <div class="form-group">
+      <label for="registerPassword" class="text">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="registerPassword"
+        placeholder="Password"
+        name="password"
+      />
+    </div>
+    <button type="submit" class="btn btn-primary btn-block">Register</button>
+    <div class="link-container">
+      <a href="/login">Already have an account? Login here</a>
+    </div>
+  </form>
+</div>

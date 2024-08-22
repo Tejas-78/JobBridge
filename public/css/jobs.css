@@ -1,0 +1,39 @@
+/* main.css */
+.job-card {
+  background: linear-gradient(135deg, rgba(84, 24, 139, 0.911), rgba(7, 42, 80, 0.897));
+    border-radius: 10px;
+    transition: transform 0.2s ease-in-out;
+}
+
+.job-card:hover {
+    transform: translateY(-5px);
+}
+
+.job-card h5 {
+    font-size: 1.25rem;
+    color: #c5d7e9;
+}
+
+.job-card p {
+    color: #b7c4cf;
+}
+
+.job-card .skills button {
+    border-radius: 20px;
+    padding: 5px 10px;
+    font-size: 0.75rem;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #5b08bb;
+    border-color: #5408aa;
+}
+
+.pagination .page-link {
+    color: #450c86;
+}
+
+.pagination .page-link:hover {
+    color: #dfcaf7;
+    background-color: #622d9e;
+}

@@ -1,0 +1,38 @@
+<div class="applicants-container">
+  <h1>Applicants for <%= job[0].jobDesignation %></h1>
+  <div class="applicants-list">
+    <% if (applicants.length > 0) { let i=1; %>
+    <table class="applicants-table">
+      <thead>
+        <tr>
+          <th>Sr No.</th>
+          <th>Name</th>
+          <th>Email</th>
+          <th>Contact No.</th>
+          <th>Resume</th>
+        </tr>
+      </thead>
+      <tbody>
+        <% applicants.forEach(applicant => { %>
+        <tr>
+          <td><%= i++ %></td>
+          <td><%= applicant.name %></td>
+          <td><%= applicant.email %></td>
+          <td><%= applicant.contact %></td>
+          <td>
+            <a
+              href="/<%= applicant.resume %>"
+              class="btn btn-view"
+              target="_blank"
+              >View Resume</a
+            >
+          </td>
+        </tr>
+        <% }); %>
+      </tbody>
+    </table>
+    <% } else { %>
+    <p>No applicants have applied for this job yet.</p>
+    <% } %>
+  </div>
+</div>

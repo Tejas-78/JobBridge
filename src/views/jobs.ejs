@@ -1,0 +1,73 @@
+<!-- jobs.ejs -->
+<% if(msg) {%>
+<div class="container mt-3">
+  <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Success!</strong> <%= msg %>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>
+<% } %>
+
+<div class="container mt-5">
+  <h1 class="text-center mb-4">Available Jobs</h1>
+
+  <div class="row">
+    <% if (jobs.length > 0) { %> <% jobs.forEach(job => { %>
+    <div class="col-md-4 mb-4">
+      <div class="card job-card shadow-sm">
+        <div class="card-body">
+          <h5 class="card-title"><%= job.companyName %></h5>
+          <p class="card-text">
+            <strong>Category:</strong> <%= job.jobCategory %>
+          </p>
+          <p class="card-text">
+            <strong>Designation:</strong> <%= job.jobDesignation %>
+          </p>
+          <p class="card-text">
+            <i class="fas fa-map-marker-alt"></i> <%= job.jobLocation %>
+          </p>
+          <p class="card-text">
+            <i class="fas fa-rupee-sign"></i> <%= job.salary %>
+          </p>
+          <div class="skills mt-3">
+            <% job.skillsRequired.forEach(skill => { %>
+            <button class="btn btn-outline-primary btn-sm mr-1 mb-1">
+              <%= skill %>
+            </button>
+            <% }) %>
+          </div>
+          <a
+            href="/job-details/<%= job.id %>"
+            class="btn btn-primary btn-block mt-3 custom-button"
+            >View Details</a
+          >
+        </div>
+      </div>
+    </div>
+    <% }) %> <% } else { %>
+    <div class="col-12">
+      <p>No jobs available at the moment.</p>
+    </div>
+    <% } %>
+  </div>
+
+  <nav aria-label="Page navigation" class="mt-4">
+    <ul class="pagination justify-content-center">
+      <% if (currentPage > 1) { %>
+      <li class="page-item">
+        <a class="page-link" href="?page=<%= currentPage - 1 %>">Previous</a>
+      </li>
+      <% } %> <% for (let i = 1; i <= totalPages; i++) { %>
+      <li class="page-item <%= i === currentPage ? 'active' : '' %>">
+        <a class="page-link" href="?page=<%= i %>"><%= i %></a>
+      </li>
+      <% } %> <% if (currentPage < totalPages) { %>
+      <li class="page-item">
+        <a class="page-link" href="?page=<%= currentPage + 1 %>">Next</a>
+      </li>
+      <% } %>
+    </ul>
+  </nav>
+</div>

@@ -1,0 +1,17 @@
+<div
+  class="container flex-column justify-content-center align-items-center min-vh-100"
+>
+  <div class="text-center">
+    <div class="emoji animated bounce">&#128577;</div>
+    <% if(msg) { %>
+      <h1 class="display-4">404</h1>
+    
+    <p class="lead">Oops! <%= msg %>.</p>
+    <% }else {%>
+
+    <p class="lead">Sorry, only recruiters who have posted this job can view applicants.</p>
+<% } %>
+  </div>
+    <a href="/" class="btn button">Go Home</a>
+  </div>
+</div>

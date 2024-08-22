@@ -1,0 +1,121 @@
+<% if(errorMessages){ errorMessages.forEach(error =>{ %>
+
+<div class="container mt-3">
+  <div class="alert alert-warning alert-dismissible fade show" role="alert">
+    <%= error.msg %>
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+</div>
+
+<% }) } %>
+<div class="container mt-5">
+  <div class="card job-form-card">
+    <div class="card-body">
+      <h2 class="text-center">Post a Job</h2>
+      <form action="/post-job" method="POST">
+        <div class="form-group">
+          <label for="jobCategory" class="form-label">Job Category</label>
+          <select
+            class="form-control custom-select"
+            id="jobCategory"
+            name="jobCategory"
+          >
+            <option>Software Development</option>
+            <option>Design</option>
+            <option>Marketing</option>
+            <option>Sales</option>
+            <option>Human Resources</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="jobDesignation" class="form-label">Job Designation</label>
+          <select
+            class="form-control custom-select"
+            id="jobDesignation"
+            name="jobDesignation"
+          >
+            <option>Junior Developer</option>
+            <option>Senior Developer</option>
+            <option>Project Manager</option>
+            <option>Product Manager</option>
+            <option>UX/UI Designer</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="jobLocation" class="form-label">Job Location</label>
+          <input
+            type="text"
+            class="form-control custom-input"
+            id="jobLocation"
+            name="jobLocation"
+            placeholder="Enter job location"
+          />
+        </div>
+        <div class="form-group">
+          <label for="companyName" class="form-label">Company Name</label>
+          <input
+            type="text"
+            class="form-control custom-input"
+            id="companyName"
+            name="companyName"
+            placeholder="Enter company name"
+          />
+        </div>
+        <div class="form-group">
+          <label for="salary" class="form-label">Salary</label>
+          <input
+            type="text"
+            class="form-control custom-input"
+            id="salary"
+            name="salary"
+            placeholder="Enter salary"
+          />
+        </div>
+        <div class="form-group">
+          <label for="totalOpenings" class="form-label"
+            >Total No. of Openings</label
+          >
+          <input
+            type="number"
+            class="form-control custom-input"
+            id="totalOpenings"
+            name="totalOpenings"
+            placeholder="Enter number of openings"
+          />
+        </div>
+        <div class="form-group">
+          <label for="skillsRequired" class="form-label">Skills Required</label>
+          <select
+            multiple
+            class="form-control custom-multi-select"
+            id="skillsRequired"
+            name="skillsRequired"
+          >
+            <option>JavaScript</option>
+            <option>Python</option>
+            <option>Java</option>
+            <option>HTML/CSS</option>
+            <option>React</option>
+            <option>Node.js</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="applicationEndDate" class="form-label"
+            >End of Application</label
+          >
+          <input
+            type="date"
+            class="form-control custom-input"
+            id="applicationEndDate"
+            name="applicationEndDate"
+          />
+        </div>
+        <button type="submit" class="btn btn-primary custom-button btn-block">
+          Submit
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

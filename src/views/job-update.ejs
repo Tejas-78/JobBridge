@@ -1,0 +1,117 @@
+<% if (jobs.length > 0) { %> <% jobs.forEach(job => { %>
+
+<div class="container mt-5">
+  <div class="card job-form-card">
+    <div class="card-body">
+      <h2 class="text-center">update Job</h2>
+      <form action="/jobs/<%=job.id%>/update" method="POST">
+        <div class="form-group">
+          <label for="jobCategory" class="form-label">Job Category</label>
+          <select
+            class="form-control custom-select"
+            id="jobCategory"
+            name="jobCategory"
+            value="<%=job.jobCategory %>"
+          >
+          <option value="Software Development" <%= job.jobCategory === 'Software Development' ? 'selected' : '' %>>Software Development</option>
+          <option value="Design" <%= job.jobCategory === 'Design' ? 'selected' : '' %>>Design</option>
+          <option value="Marketing" <%= job.jobCategory === 'Marketing' ? 'selected' : '' %>>Marketing</option>
+          <option value="Sales" <%= job.jobCategory === 'Sales' ? 'selected' : '' %>>Sales</option>
+          <option value="Human Resources" <%= job.jobCategory === 'Human Resources' ? 'selected' : '' %>>Human Resources</option>
+        </select>
+        </div>
+        <div class="form-group">
+          <label for="jobDesignation" class="form-label">Job Designation</label>
+          <select
+            class="form-control custom-select"
+            id="jobDesignation"
+            name="jobDesignation"
+            value="<%=job.jobDesignation %>"
+          >
+          <option value="Junior Developer" <%= job.jobDesignation === 'Junior Developer' ? 'selected' : '' %>>Junior Developer</option>
+          <option value="Senior Developer" <%= job.jobDesignation === 'Senior Developer' ? 'selected' : '' %>>Senior Developer</option>
+          <option value="Project Manager" <%= job.jobDesignation === 'Project Manager' ? 'selected' : '' %>>Project Manager</option>
+          <option value="Product Manager" <%= job.jobDesignation === 'Product Manager' ? 'selected' : '' %>>Product Manager</option>
+          <option value="UX/UI Designer" <%= job.jobDesignation === 'UX/UI Designer' ? 'selected' : '' %>>UX/UI Designer</option>        
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="jobLocation" class="form-label">Job Location</label>
+          <input
+            type="text"
+            class="form-control custom-input"
+            id="jobLocation"
+            name="jobLocation"
+            value="<%=job.jobLocation %>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="companyName" class="form-label">Company Name</label>
+          <input
+            type="text"
+            class="form-control custom-input"
+            id="companyName"
+            name="companyName"
+            value="<%=job.companyName %>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="salary" class="form-label">Salary</label>
+          <input
+            type="text"
+            class="form-control custom-input"
+            id="salary"
+            name="salary"
+            value="<%=job.salary %>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="totalOpenings" class="form-label"
+            >Total No. of Openings</label
+          >
+          <input
+            type="number"
+            class="form-control custom-input"
+            id="totalOpenings"
+            name="totalOpenings"
+            value="<%=job.totalOpenings %>"
+          />
+        </div>
+        <div class="form-group">
+          <label for="skillsRequired" class="form-label">Skills Required</label>
+          <select
+            multiple
+            class="form-control custom-multi-select"
+            id="skillsRequired"
+            name="skillsRequired"
+            value="<%=job.skillsRequired %>"
+          >
+          <option value="JavaScript" <%= job.skillsRequired.includes('JavaScript') ? 'selected' : '' %>>JavaScript</option>
+          <option value="Python" <%= job.skillsRequired.includes('Python') ? 'selected' : '' %>>Python</option>
+          <option value="Java" <%= job.skillsRequired.includes('Java') ? 'selected' : '' %>>Java</option>
+          <option value="HTML/CSS" <%= job.skillsRequired.includes('HTML/CSS') ? 'selected' : '' %>>HTML/CSS</option>
+          <option value="React" <%= job.skillsRequired.includes('React') ? 'selected' : '' %>>React</option>
+          <option value="Node.js" <%= job.skillsRequired.includes('Node.js') ? 'selected' : '' %>>Node.js</option>
+        </select>
+        </div>
+        <div class="form-group">
+          <label for="applicationEndDate" class="form-label"
+            >End of Application</label
+          >
+          <input
+            type="date"
+            class="form-control custom-input"
+            id="applicationEndDate"
+            name="applicationEndDate"
+            value="<%=job.applicationEndDate %>"
+          />
+          <% }) %>
+        </div>
+        <button type="submit" class="btn btn-primary custom-button btn-block">
+          Update
+        </button>
+      </form>
+    </div>
+  </div>
+</div>
+<% } %>
